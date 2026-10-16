@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500&display=swap');
 :root {
   --bg: #F3EFE5;
   --bg-soft: #EAE4D6;
@@ -8,8 +8,8 @@
   --dust: #C79E9A;
   --line: rgba(59,55,48,.12);
 
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'Playfair Display', Georgia, serif;
+  --serif: 'EB Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
 
   --space-1: 8px; --space-2: 16px; --space-3: 28px;
   --space-4: 48px; --space-5: 88px; --space-6: 140px;
@@ -19,13 +19,13 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--serif); font-weight: 400; font-style: italic;
+  font-family: var(--sans); font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; background: none; border: none; }
 
-/* ---------- Nav ---------- */
+/* ---------- Nav: почти невидима ---------- */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
@@ -36,13 +36,13 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .nav__links a { color: inherit; }
 .nav.nav--on-photo { color: #FBF8F1; }
 .nav:not(.nav--on-photo) { color: var(--ink); }
-.nav__links { display: flex; gap: var(--space-3); font-size: 16px; letter-spacing: .08em; font-style: italic; }
+.nav__links { display: flex; gap: var(--space-3); font-size: 16px; letter-spacing: .08em; }
 .nav__links a { opacity: .65; transition: opacity .3s ease; }
 .nav__links a:hover { opacity: 1; }
 @media (max-width: 560px) {
   .nav { padding: var(--space-2) var(--space-2); }
   .nav__mark { font-size: 16px; }
-  .nav__links { gap: 10px; font-size: 14px; letter-spacing: .04em; }
+  .nav__links { gap: 10px; font-size: 10px; letter-spacing: .04em; }
 }
 
 #about-section, #contacts-section { scroll-margin-top: 90px; }
@@ -76,7 +76,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .opening__scrim { position: absolute; inset: 0; background: rgba(30,28,22,.45); z-index: 1; }
 .opening__inner { position: relative; z-index: 2; padding: var(--space-4); }
 .opening__name {
-  font-family: var(--serif); font-weight: 400; font-style: italic;
+  font-family: var(--serif); font-weight: 300; font-style: italic;
   font-size: clamp(38px, 8vw, 120px); letter-spacing: .01em; color: #FBF8F1;
   margin: 0 0 var(--space-2);
   opacity: 0; animation: fadeUp 2s ease forwards .3s;
@@ -88,7 +88,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .opening__cue {
   position: absolute; bottom: var(--space-4); left: 0; right: 0; margin: 0 auto;
   z-index: 2; width: max-content;
-  font-size: 14px; color: rgba(251,248,241,.75); letter-spacing: .1em; font-style: italic;
+  font-size: 12px; color: rgba(251,248,241,.75); letter-spacing: .1em;
   opacity: 0; animation: fadeUp 2s ease forwards 2s, bob 3s ease-in-out infinite 3s;
 }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
@@ -113,7 +113,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .slide2__scrim { position: absolute; inset: 0; background: rgba(30,28,22,.45); z-index: 1; }
 .slide2__text {
   position: relative; z-index: 2; max-width: 900px;
-  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-family: var(--serif); font-style: italic; font-weight: 300;
   font-size: clamp(28px, 5vw, 52px); line-height: 1.3; color: #FBF8F1;
   user-select: none;
   opacity: 1;
@@ -153,9 +153,9 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   padding: var(--space-6) clamp(var(--space-4), 6vw, 96px);
   text-align: left;
 }
-.about__lead { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(28px, 3.4vw, 40px); margin: 0 0 var(--space-3); }
+.about__lead { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(28px, 3.4vw, 40px); margin: 0 0 var(--space-3); }
 .about__lead:empty { display: none; }
-.about__body { color: var(--ink-soft); font-size: 20px; line-height: 1.85; margin: 0 0 18px; max-width: 46ch; font-style: italic; }
+.about__body { color: var(--ink-soft); font-size: 18px; line-height: 1.85; margin: 0 0 18px; max-width: 46ch; }
 .about__body:last-child { margin-bottom: 0; }
 @media (max-width: 860px) {
   .about { flex-direction: column; min-height: 0; }
@@ -168,31 +168,31 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 /* ---------- Contacts ---------- */
 .contacts { padding: var(--space-6) var(--space-4) var(--space-5); text-align: center; }
 .contacts__lead { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 3vw, 30px); margin: 0 0 var(--space-3); }
-.contacts__row { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; font-size: 16px; font-style: italic; }
+.contacts__row { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; font-size: 14px; }
 .contacts__row a.live { border-bottom: 1px solid var(--ink); }
 .contacts__row span.soon { color: var(--ink-soft); opacity: .55; }
 
 .footer {
   text-align: center; padding: var(--space-3) var(--space-4);
-  font-size: 12px; letter-spacing: .08em; color: var(--ink-soft); text-transform: uppercase; font-style: italic;
+  font-size: 11px; letter-spacing: .08em; color: var(--ink-soft); text-transform: uppercase;
 }
 
 /* ---------- Views ---------- */
 .view { display: none; }
 .view.is-active { display: block; }
 
-/* ---------- Витрина ---------- */
+/* ---------- Витрина: все работы сразу ---------- */
 .vitrina { max-width: 1200px; margin: 0 auto; padding: 140px var(--space-4) var(--space-6); }
 .vitrina__intro {
-  text-align: center; font-family: var(--serif); font-style: italic; font-weight: 500;
+  text-align: center; font-family: var(--serif); font-style: italic; font-weight: 400;
   font-size: clamp(20px, 2.6vw, 28px); color: var(--ink-soft); margin: 0 0 var(--space-5);
 }
 .vitrina__tabs {
   display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
   margin-bottom: var(--space-4);
-  font-size: 14px; letter-spacing: .08em; text-transform: uppercase; font-style: italic;
+  font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
 }
-.vitrina__tabs button { color: var(--ink-soft); padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; font-style: italic; }
+.vitrina__tabs button { color: var(--ink-soft); padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; }
 .vitrina__tabs button:hover { color: var(--ink); }
 .vitrina__tabs button.is-active { color: var(--ink); border-color: var(--sage); }
 .vitrina__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-6) var(--space-3); }
@@ -207,26 +207,27 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   position: absolute; top: 10px; left: 10px; z-index: 2;
   background: var(--bg); color: var(--ink-soft);
   font-size: 10px; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px;
-  font-style: normal;
 }
 .vitrina__card:hover .vitrina__frame img { transform: scale(1.03); }
 .vitrina__caption { margin-top: 10px; text-align: center; }
 
+/* НАЗВАНИЕ КАРТИНЫ (EB Garamond Regular, аккуратное и ровное) */
 .vitrina__caption .name, .painting-title {
   display: block;
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: -0.01em;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 0.01em;
   -webkit-text-size-adjust: 100%;
 }
 
+/* ПАРАМЕТРЫ КАРТИНЫ (EB Garamond Regular) */
 .vitrina__caption .specs {
   display: block;
-  font-family: var(--serif);
+  font-family: 'EB Garamond', Georgia, serif;
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   font-size: 15px;
   letter-spacing: .02em;
   text-transform: lowercase;
@@ -247,9 +248,10 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .overlay__stage img { max-width: 98vw; max-height: 94vh; opacity: 0; animation: fadeIn 1s ease forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 .overlay__caption { text-align: center; padding-bottom: var(--space-5); }
-.overlay__cat { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; font-style: italic; }
-.overlay__name { display: block; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 26px; color: var(--ink); margin-bottom: 8px; }
-.overlay__specs { display: block; font-family: var(--serif); font-size: 16px; text-transform: lowercase; color: var(--ink-soft); margin-bottom: 4px; font-style: italic; }
-.overlay__price { display: block; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--ink); }
+.overlay__cat { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
+.overlay__name { display: block; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 24px; color: var(--ink); margin-bottom: 8px; }
+.overlay__specs { display: block; font-family: var(--sans); font-size: 14px; text-transform: lowercase; color: var(--ink-soft); margin-bottom: 4px; }
+.overlay__price { display: block; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce) { * { animation-duration: .001ms !important; transition-duration: .001ms !important; } }
+ 
