@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=PT+Serif:wght@400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
 :root {
   --bg: #F3EFE5;
   --bg-soft: #EAE4D6;
@@ -201,56 +201,6 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 
 /* Пропорциональные миниатюры */
 .vitrina__frame { position: relative; overflow: hidden; background: var(--bg-soft); }
-.vitrina__frame img { width: 100%; height: auto; display: block; object-fit: contain; transition: transform .6s ease; }
+.vitrina__frame img { width: 100%; height: auto; display: block
 
-.vitrina__sold {
-  position: absolute; top: 10px; left: 10px; z-index: 2;
-  background: var(--bg); color: var(--ink-soft);
-  font-size: 10px; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px;
-}
-.vitrina__card:hover .vitrina__frame img { transform: scale(1.03); }
-.vitrina__caption { margin-top: 10px; text-align: center; }
-
-/* НАЗВАНИЕ КАРТИНЫ (PT Serif Regular, легкое и ровное) */
-.vitrina__caption .name, .painting-title {
-  display: block;
-  font-family: 'PT Serif', Georgia, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  -webkit-text-size-adjust: 100%;
-}
-
-/* ПАРАМЕТРЫ КАРТИНЫ (PT Serif Regular) */
-.vitrina__caption .specs {
-  display: block;
-  font-family: 'PT Serif', Georgia, serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  letter-spacing: .02em;
-  text-transform: lowercase;
-  color: var(--ink-soft);
-  margin-top: 3px;
-}
-
-/* Лайтбокс */
-.overlay { position: fixed; inset: 0; z-index: 100; background: var(--bg); display: none; overflow-y: auto; }
-.overlay.is-active { display: block; }
-.overlay__close {
-  position: fixed; top: var(--space-3); right: var(--space-4); z-index: 5;
-  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--line); border-radius: 50%; background: var(--bg);
-}
-.overlay__close svg { width: 15px; height: 15px; }
-.overlay__stage { min-height: 94vh; display: flex; align-items: center; justify-content: center; padding: var(--space-2); }
-.overlay__stage img { max-width: 98vw; max-height: 94vh; opacity: 0; animation: fadeIn 1s ease forwards; }
-@keyframes fadeIn { to { opacity: 1; } }
-.overlay__caption { text-align: center; padding-bottom: var(--space-5); }
-.overlay__cat { display: block; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px; }
-.overlay__name { display: block; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 24px; color: var(--ink); margin-bottom: 8px; }
-.overlay__specs { display: block; font-family: var(--sans); font-size: 14px; text-transform: lowercase; color: var(--ink-soft); margin-bottom: 4px; }
-.overlay__price { display: block; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink); }
-
-@media (prefers-reduced-motion: reduce) { * { animation-duration: .001ms !important; transition-duration: .001ms !important; } }
+  
