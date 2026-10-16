@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=PT+Serif:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap');
 :root {
   --bg: #F3EFE5;
   --bg-soft: #EAE4D6;
@@ -211,34 +211,44 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .vitrina__card:hover .vitrina__frame img { transform: scale(1.03); }
 .vitrina__caption { margin-top: 12px; text-align: center; padding: 0 8px; }
 
-/* НАЗВАНИЕ КАРТИНЫ (Cormorant Garamond Regular, с нормальным переносом) */
+/* НАЗВАНИЕ КАРТИНЫ (на десктопе — изящный Cormorant, на мобильных — чистый тонкий PT Serif без багов с 'й') */
 .vitrina__caption .name, .painting-title {
   display: block;
   font-family: var(--serif);
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.35;
   letter-spacing: 0.01em;
-  word-break: normal;
-  overflow-wrap: break-word;
   -webkit-text-size-adjust: 100%;
 }
 
-/* ПАРАМЕТРЫ КАРТИНЫ (Аккуратный отступ, чтобы ничего не слипалось) */
+/* ПАРАМЕТРЫ КАРТИНЫ */
 .vitrina__caption .specs {
   display: block;
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-weight: 300;
   font-style: normal;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.45;
   letter-spacing: .02em;
   text-transform: lowercase;
   color: var(--ink-soft);
   margin-top: 4px;
-  word-break: normal;
-  overflow-wrap: break-word;
+}
+
+/* МОБИЛЬНАЯ АДАПТАЦИЯ ДЛЯ КАРТОЧЕК */
+@media (max-width: 560px) {
+  .vitrina__caption .name, .painting-title {
+    font-family: 'PT Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .vitrina__caption .specs {
+    font-family: 'PT Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 13px;
+  }
 }
 
 /* Лайтбокс */
