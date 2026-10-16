@@ -225,7 +225,8 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .vitrina__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-6) var(--space-3); }
 .vitrina__card { cursor: zoom-in; opacity: 0; transform: translateY(16px); transition: opacity 1s ease, transform 1s ease; }
 .vitrina__card.is-visible { opacity: 1; transform: translateY(0); }
-.vitrina__frame { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--bg-soft); }
+.vitrina__frame { position: relative; overflow: hidden; background: var(--bg-soft); }
+.vitrina__frame img { width: 100%; height: auto; display: block; object-fit: contain; transition: transform .6s ease; }
 .vitrina__sold {
   position: absolute; top: 10px; left: 10px; z-index: 2;
   background: var(--bg); color: var(--ink-soft);
