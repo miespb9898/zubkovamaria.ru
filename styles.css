@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=PT+Serif:wght@400&family=Inter:wght@300;400;500&display=swap');
 :root {
   --bg: #F3EFE5;
   --bg-soft: #EAE4D6;
@@ -8,7 +8,7 @@
   --dust: #C79E9A;
   --line: rgba(59,55,48,.12);
 
-  --serif: 'EB Garamond', Georgia, serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Inter', -apple-system, sans-serif;
 
   --space-1: 8px; --space-2: 16px; --space-3: 28px;
@@ -211,24 +211,24 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .vitrina__card:hover .vitrina__frame img { transform: scale(1.03); }
 .vitrina__caption { margin-top: 10px; text-align: center; }
 
-/* НАЗВАНИЕ КАРТИНЫ (EB Garamond Regular, аккуратное и ровное) */
+/* НАЗВАНИЕ КАРТИНЫ (PT Serif Regular, легкое и ровное) */
 .vitrina__caption .name, .painting-title {
   display: block;
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'PT Serif', Georgia, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 18px;
   letter-spacing: 0.01em;
   -webkit-text-size-adjust: 100%;
 }
 
-/* ПАРАМЕТРЫ КАРТИНЫ (EB Garamond Regular) */
+/* ПАРАМЕТРЫ КАРТИНЫ (PT Serif Regular) */
 .vitrina__caption .specs {
   display: block;
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'PT Serif', Georgia, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: .02em;
   text-transform: lowercase;
   color: var(--ink-soft);
@@ -254,4 +254,3 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .overlay__price { display: block; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce) { * { animation-duration: .001ms !important; transition-duration: .001ms !important; } }
- 
