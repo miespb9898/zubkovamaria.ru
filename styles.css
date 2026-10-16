@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 :root {
   --bg: #F3EFE5;
   --bg-soft: #EAE4D6;
@@ -8,8 +8,8 @@
   --dust: #C79E9A;
   --line: rgba(59,55,48,.12);
 
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Playfair Display', Georgia, serif;
 
   --space-1: 8px; --space-2: 16px; --space-3: 28px;
   --space-4: 48px; --space-5: 88px; --space-6: 140px;
@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--serif); font-weight: 300; font-style: italic;
+  font-family: var(--serif); font-weight: 400; font-style: italic;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
@@ -76,7 +76,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .opening__scrim { position: absolute; inset: 0; background: rgba(30,28,22,.45); z-index: 1; }
 .opening__inner { position: relative; z-index: 2; padding: var(--space-4); }
 .opening__name {
-  font-family: var(--serif); font-weight: 300; font-style: italic;
+  font-family: var(--serif); font-weight: 400; font-style: italic;
   font-size: clamp(38px, 8vw, 120px); letter-spacing: .01em; color: #FBF8F1;
   margin: 0 0 var(--space-2);
   opacity: 0; animation: fadeUp 2s ease forwards .3s;
@@ -113,7 +113,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .slide2__scrim { position: absolute; inset: 0; background: rgba(30,28,22,.45); z-index: 1; }
 .slide2__text {
   position: relative; z-index: 2; max-width: 900px;
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-style: italic; font-weight: 400;
   font-size: clamp(28px, 5vw, 52px); line-height: 1.3; color: #FBF8F1;
   user-select: none;
   opacity: 1;
@@ -153,7 +153,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   padding: var(--space-6) clamp(var(--space-4), 6vw, 96px);
   text-align: left;
 }
-.about__lead { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(28px, 3.4vw, 40px); margin: 0 0 var(--space-3); }
+.about__lead { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(28px, 3.4vw, 40px); margin: 0 0 var(--space-3); }
 .about__lead:empty { display: none; }
 .about__body { color: var(--ink-soft); font-size: 20px; line-height: 1.85; margin: 0 0 18px; max-width: 46ch; font-style: italic; }
 .about__body:last-child { margin-bottom: 0; }
@@ -184,7 +184,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 /* ---------- Витрина ---------- */
 .vitrina { max-width: 1200px; margin: 0 auto; padding: 140px var(--space-4) var(--space-6); }
 .vitrina__intro {
-  text-align: center; font-family: var(--serif); font-style: italic; font-weight: 400;
+  text-align: center; font-family: var(--serif); font-style: italic; font-weight: 500;
   font-size: clamp(20px, 2.6vw, 28px); color: var(--ink-soft); margin: 0 0 var(--space-5);
 }
 .vitrina__tabs {
@@ -216,7 +216,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
   display: block;
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.01em;
   -webkit-text-size-adjust: 100%;
@@ -225,7 +225,7 @@ button { font-family: inherit; cursor: pointer; background: none; border: none; 
 .vitrina__caption .specs {
   display: block;
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   font-size: 15px;
   letter-spacing: .02em;
