@@ -286,8 +286,8 @@ const PAINTINGS = [
     category: "Цветы и травы",
     medium: "масло, холст на подрамнике",
     size: "70 × 90см",
-    price: 65000,
-    status: "available",
+    price: null,
+    status: "sold",
     featured: true,
     image: "images/tsvety-i-travy-14.jpeg"
   },
