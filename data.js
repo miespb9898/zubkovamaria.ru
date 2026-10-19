@@ -385,7 +385,7 @@ const PAINTINGS = [
     category: "Цветы и травы",
     medium: "масляная пастель, бумага",
     size: "30 × 40 см",
-    price: 21000,
+    price: 30000,
     status: "available",
     featured: false,
     image: "images/tsvety-i-travy-15.jpeg"
