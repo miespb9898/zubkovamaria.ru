@@ -182,7 +182,6 @@
       showView("vitrina");
     } else {
       showView("home");
-      // Instant scroll fix for "о художнице" or other sections on first click
       if (hash === "about-section" || hash === "contacts-section") {
         setTimeout(function() {
           var el = document.getElementById(hash);
@@ -193,12 +192,10 @@
   }
   window.addEventListener("hashchange", handleHash);
 
-  // FIX: Make "о художнице" link work instantly from anywhere without double click
   function initAboutLinkFix() {
     var aboutLink = document.getElementById("nav-about");
     if (aboutLink) {
       aboutLink.addEventListener("click", function (e) {
-        // If we are currently on vitrina, switch to home first, then scroll
         if (document.getElementById("view-vitrina").classList.contains("is-active")) {
           showView("home");
           history.pushState(null, null, "#about-section");
@@ -236,16 +233,35 @@
     if (e.key === "Escape" && overlay.classList.contains("is-active")) closeLightbox();
   });
 
+  // Шапка остается белой на первом и втором слайдах, темнеет с третьего блока
   function initNavColor() {
     var nav = document.querySelector(".nav");
     var top = document.getElementById("top");
-    if (!("IntersectionObserver" in window)) return;
-    var io = new IntersectionObserver(function (entries) {
+    var slide2 = document.getElementById("slide2");
+    if (!("IntersectionObserver" in window) || !top || !slide2) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      var isTopVisible = false;
+      var isSlide2Visible = false;
+
       entries.forEach(function (entry) {
-        nav.classList.toggle("nav--on-photo", entry.intersectionRatio > 0.6);
+        if (entry.target.id === "top" && entry.isIntersecting) {
+          isTopVisible = entry.intersectionRatio > 0.3;
+        }
+        if (entry.target.id === "slide2" && entry.isIntersecting) {
+          isSlide2Visible = entry.intersectionRatio > 0.3;
+        }
       });
-    }, { threshold: [0, 0.6, 1] });
-    io.observe(top);
+
+      if (isTopVisible || isSlide2Visible) {
+        nav.classList.add("nav--on-photo");
+      } else {
+        nav.classList.remove("nav--on-photo");
+      }
+    }, { threshold: [0, 0.3, 0.6, 1] });
+
+    observer.observe(top);
+    observer.observe(slide2);
   }
 
   function initFloatCta() {
