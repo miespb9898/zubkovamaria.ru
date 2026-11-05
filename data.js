@@ -479,7 +479,7 @@ const PAINTINGS = [
     image: "images/tainstvenni sad.jpg"
   },
   {
-    id: "Ribki",
+    id: " Ribki",
     title: "Копия А.Матиса - Золотые рыбки",
     category: "Натюрморты",
     medium: "масло, холст на подрамнике",
@@ -487,7 +487,7 @@ const PAINTINGS = [
     price: 15000,
     status: "available",
     featured: false,
-    image: "images/Ribki.jpg"
+    image: "images/ Ribki.jpg"
   },
   {
     id: "Plucha",
