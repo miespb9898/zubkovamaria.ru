@@ -434,6 +434,83 @@ const PAINTINGS = [
     featured: false,
     image: "images/osenniy-potseluy.jpg"
   },
+    {
+    id: "tri inzhira",
+    title: "Три инжира",
+    category: "Натюрморты",
+    medium: "масляная пастель, бумага",
+    size: "9 × 14 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/tri inzhira.jpg"
+  },
+  {
+    id: "buket hrizantem",
+    title: "Букет хризантем",
+    category: "Натюрморты",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: 15000,
+    status: "available",
+    featured: false,
+    image: "images/buket hrizantem.jpg"
+  }, 
+  {
+    id: "Sad",
+    title: "Сад",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/Sad.jpg"
+  },
+  {
+    id: "tainstvenni sad",
+    title: "Таинственный сад",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: 13000,
+    status: "available",
+    featured: false,
+    image: "images/tainstvenni sad.jpg"
+  },
+  {
+    id: "Ribki",
+    title: "Копия А.Матиса - Золотые рыбки",
+    category: "Натюрморты",
+    medium: "масло, холст на подрамнике",
+    size: "15 × 20 см",
+    price: 15000,
+    status: "available",
+    featured: false,
+    image: "images/Ribki.jpg"
+  },
+  {
+    id: "Plucha",
+    title: "Таинственный сад",
+    category: "Животные",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/Plucha.jpg"
+  },
+  {
+    id: "Margaritki",
+    title: "Маргаритки и клевер",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "60 × 60 см",
+    price: 40000,
+    status: "available",
+    featured: false,
+    image: "images/Margaritki.jpg"
+  },
 ];
 
 const CATEGORY_ORDER = ["Женщины", "Животные", "Смеха ради", "Натюрморты", "Петербург", "Цветы и травы"];
