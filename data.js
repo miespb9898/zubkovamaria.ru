@@ -5,6 +5,149 @@
 */
 
 const PAINTINGS = [
+   {
+    id: "Shopot Trav",
+    title: "Шопот Трав",
+    category: "Цветы и Травы",
+    medium: "масляная пастель, бумага"",
+    size: "60 × 60 см",
+    price: 25000,
+    status: "available",
+    featured: false,
+    image: "images/Shopot Trav.jpg
+  },
+    {
+    id: "I,m crazy!",
+    title: "I,m crazy!",
+    category: "Животные",
+    medium: "масло, холст на подрамнике",
+    size: "40 × 40 см",
+    price: 25000,
+    status: "available",
+    featured: false,
+    image: "images/I,m crazy!.jpg"
+  },
+  {
+    id: "tri inzhira",
+    title: "Три инжира",
+    category: "Натюрморты",
+    medium: "масляная пастель, бумага",
+    size: "9 × 14 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/tri inzhira.jpg"
+  },
+  {
+    id: "buket hrizantem",
+    title: "Букет хризантем",
+    category: "Натюрморты",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: 15000,
+    status: "available",
+    featured: false,
+    image: "images/buket hrizantem.jpg"
+  }, 
+  {
+    id: "Sad",
+    title: "Сад",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/Sad.jpg"
+  },
+  {
+    id: "tainstvenni sad",
+    title: "Таинственный сад",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: 13000,
+    status: "available",
+    featured: false,
+    image: "images/tainstvenni sad.jpg"
+  },
+  {
+    id: "Ribki",
+    title: "Копия А.Матиса - Золотые рыбки",
+    category: "Натюрморты",
+    medium: "масло, холст на подрамнике",
+    size: "15 × 20 см",
+    price: 15000,
+    status: "available",
+    featured: false,
+    image: "images/Ribki.jpg"
+  },
+  {
+    id: "Plucha",
+    title: "Таинственный сад",
+    category: "Животные",
+    medium: "масляная пастель, бумага",
+    size: "30 × 40 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/Plucha.jpg"
+  },
+  {
+    id: "Margaritki",
+    title: "Маргаритки и клевер",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "60 × 60 см",
+    price: null,
+    status: "sold",
+    featured: false,
+    image: "images/Margaritki.jpg"
+  },
+  {
+    id: "yablonya",
+    title: "Яблоня",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "14 × 21 см",
+    price: 12000,
+    status: "available",
+    featured: false,
+    image: "images/yablonya.jpeg"
+  },
+  {
+    id: "beliy-lebed",
+    title: "Белый лебедь на синей воде",
+    category: "Животные",
+    medium: "масляная пастель, бумага",
+    size: "23 × 17 см",
+    price: 8000,
+    status: "available",
+    featured: false,
+    image: "images/beliy-lebed.jpeg"
+  },
+  {
+    id: "malchik",
+    title: "Мальчик",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "30 × 30 см",
+    price: 9000,
+    status: "available",
+    featured: false,
+    image: "images/malchik.jpg"
+  },
+  {
+    id: "osenniy-potseluy",
+    title: "Осенний поцелуй",
+    category: "Цветы и травы",
+    medium: "масляная пастель, бумага",
+    size: "25 × 20 см",
+    price: 9000,
+    status: "available",
+    featured: false,
+    image: "images/osenniy-potseluy.jpg"
+  },
   {
     id: "zhenshchiny-1",
     title: "Фигура",
@@ -389,128 +532,7 @@ const PAINTINGS = [
     status: "available",
     featured: false,
     image: "images/tsvety-i-travy-15.jpeg"
-  },
-  {
-    id: "yablonya",
-    title: "Яблоня",
-    category: "Цветы и травы",
-    medium: "масляная пастель, бумага",
-    size: "14 × 21 см",
-    price: 12000,
-    status: "available",
-    featured: false,
-    image: "images/yablonya.jpeg"
-  },
-  {
-    id: "beliy-lebed",
-    title: "Белый лебедь на синей воде",
-    category: "Животные",
-    medium: "масляная пастель, бумага",
-    size: "23 × 17 см",
-    price: 8000,
-    status: "available",
-    featured: false,
-    image: "images/beliy-lebed.jpeg"
-  },
-  {
-    id: "malchik",
-    title: "Мальчик",
-    category: "Цветы и травы",
-    medium: "масляная пастель, бумага",
-    size: "30 × 30 см",
-    price: 9000,
-    status: "available",
-    featured: false,
-    image: "images/malchik.jpg"
-  },
-  {
-    id: "osenniy-potseluy",
-    title: "Осенний поцелуй",
-    category: "Цветы и травы",
-    medium: "масляная пастель, бумага",
-    size: "25 × 20 см",
-    price: 9000,
-    status: "available",
-    featured: false,
-    image: "images/osenniy-potseluy.jpg"
-  },
-    {
-    id: "tri inzhira",
-    title: "Три инжира",
-    category: "Натюрморты",
-    medium: "масляная пастель, бумага",
-    size: "9 × 14 см",
-    price: null,
-    status: "sold",
-    featured: false,
-    image: "images/tri inzhira.jpg"
-  },
-  {
-    id: "buket hrizantem",
-    title: "Букет хризантем",
-    category: "Натюрморты",
-    medium: "масляная пастель, бумага",
-    size: "30 × 40 см",
-    price: 15000,
-    status: "available",
-    featured: false,
-    image: "images/buket hrizantem.jpg"
-  }, 
-  {
-    id: "Sad",
-    title: "Сад",
-    category: "Цветы и травы",
-    medium: "масляная пастель, бумага",
-    size: "30 × 40 см",
-    price: null,
-    status: "sold",
-    featured: false,
-    image: "images/Sad.jpg"
-  },
-  {
-    id: "tainstvenni sad",
-    title: "Таинственный сад",
-    category: "Цветы и травы",
-    medium: "масляная пастель, бумага",
-    size: "30 × 40 см",
-    price: 13000,
-    status: "available",
-    featured: false,
-    image: "images/tainstvenni sad.jpg"
-  },
-  {
-    id: "Ribki",
-    title: "Копия А.Матиса - Золотые рыбки",
-    category: "Натюрморты",
-    medium: "масло, холст на подрамнике",
-    size: "15 × 20 см",
-    price: 15000,
-    status: "available",
-    featured: false,
-    image: "images/Ribki.jpg"
-  },
-  {
-    id: "Plucha",
-    title: "Таинственный сад",
-    category: "Животные",
-    medium: "масляная пастель, бумага",
-    size: "30 × 40 см",
-    price: null,
-    status: "sold",
-    featured: false,
-    image: "images/Plucha.jpg"
-  },
-  {
-    id: "Margaritki",
-    title: "Маргаритки и клевер",
-    category: "Цветы и травы",
-    medium: "масляная пастель, бумага",
-    size: "60 × 60 см",
-    price: 40000,
-    status: "available",
-    featured: false,
-    image: "images/Margaritki.jpg"
-  },
+  }
 ];
 
 const CATEGORY_ORDER = ["Женщины", "Животные", "Смеха ради", "Натюрморты", "Петербург", "Цветы и травы"];
