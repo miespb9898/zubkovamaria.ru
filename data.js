@@ -7,11 +7,11 @@
 const PAINTINGS = [
   {
     id: "Shopot Trav",
-    title: "Шопот Трав",
+    title: "Шёпот Трав",
     category: "Цветы и Травы",
     medium: "масляная пастель, бумага",
     size: "60 × 60 см",
-    price: 25000,
+    price: 50000,
     status: "available",
     featured: false,
     image: "images/Shopot Trav.jpg"
